@@ -22,6 +22,7 @@ public class CreateProduct {
 	
 	@Test
 	public void creatOneProduct() throws InterruptedException {
+		System.out.println("--- sTARTING cREATE nEW aGENT pRODUCT tEST");
 		LauchWebApp kApp = new LauchWebApp();
 		//		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/chromedriver.exe");
 		WebDriver driver = kApp.openCGPS();

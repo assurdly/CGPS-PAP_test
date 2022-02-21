@@ -17,6 +17,7 @@ public class BulkUpload {
 	SoftAssert SoftAssert = new SoftAssert();
 	@Test
 	public void test () throws IOException {
+		System.out.println("--- sTARTING aGENT bULKuPLOAD tEST");
 		LauchWebApp kApp = new LauchWebApp();
 		WebDriver driver = kApp.openCGPS();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);

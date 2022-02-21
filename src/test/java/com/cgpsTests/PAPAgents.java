@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,6 +23,7 @@ public class PAPAgents {
 	
 	@BeforeMethod
 	public void loginPAP() throws InterruptedException {
+		
 		LauchWebApp kApp = new LauchWebApp();
 		//		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/chromedriver.exe");
 		driver = kApp.openPAP();
@@ -35,7 +37,7 @@ public class PAPAgents {
 
 	@Test
 	public void verifyPAPAccount() throws InterruptedException {
-		
+		System.out.println("--- sTARTING vERIFYING nEW aGENT aCCOUNT tEST");
 		HomePage homePage = new HomePage(driver);
 		homePage.getAffMenu().click();
 		homePage.getAffMngrMenu().click();
@@ -49,6 +51,8 @@ public class PAPAgents {
 	
 	@Test
 	public void addProductTOCampaign() throws InterruptedException {
+		
+		System.out.println("--- sTARTING ADD pRPODUCT tO cAMPAIGN tEST ----");
 		HomePage homePage = new HomePage(driver);
 		homePage.getCampaignsMenu().click();
 		homePage.getCampgnMngrMenu().click();
@@ -62,8 +66,9 @@ public class PAPAgents {
 		builderActions.sendKeys(Keys.LEFT_CONTROL).sendKeys(Keys.RIGHT).build().perform();
 		
 		campaign.getProductIdField().sendKeys(", "+CreateProduct.prodId);
+		WebElement textBox = driver.findElement(By.cssSelector(".TextArea.TextBoxContainer"));
 
-	    System.out.println("aDD pRODUCT tO cAMPAIGN cOMPLETED \nAll prodcut Ids: "+ campaign.getProductIdField().getText());
+	    System.out.println("aDD pRODUCT tO cAMPAIGN cOMPLETED \nAll prodcut Ids: "+ campaign.getProductIdField().getAttribute("value"));
 	
 		
 
