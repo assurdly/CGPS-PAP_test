@@ -1,0 +1,10 @@
+<suite name="regression test">
+	<test thread-count="1" name="create_user_and_create_product"
+		preserve-order="true">
+		<classes>
+			<class name="com.cgpsTests.BulkUpload" />
+			<class name="com.cgpsTests.CreateProduct" />
+			<class name="com.cgpsTests.PAPAgents" />
+		</classes>
+	</test>
+</suite>
