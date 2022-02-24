@@ -70,7 +70,6 @@ public class PAPAgents {
 
 	    System.out.println("aDD pRODUCT tO cAMPAIGN cOMPLETED \nAll prodcut Ids: "+ campaign.getProductIdField().getAttribute("value"));
 	
-		
 
 	}
 }

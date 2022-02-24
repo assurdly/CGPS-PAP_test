@@ -25,8 +25,12 @@ public class LauchWebApp {
 		WebDriver driver = new ChromeDriver();		
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
-		driver.navigate().to("https://"+USERNAME+":"+PASSWORD+"@dev-coronationgps.x-shops.com/admin.php");	
+		//driver.navigate().to("https://"+USERNAME+":"+PASSWORD+"@dev-coronationgps.x-shops.com/admin.php");	
+		driver.navigate().to("https://coronationgps.x-shops.com/admin.php");	
+		
 		by = By.cssSelector("[name='login']");
+		
+		
 		driver.findElement(by).sendKeys("wole.onasanya@coronationinsurance.com.ng");
 
 		// 3. Type 'LGHCzh27DV5F4mD4' in 'password'
@@ -43,6 +47,15 @@ public class LauchWebApp {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.navigate().to("https://coronationgps.postaffiliatepro.com/merchants");
+		return driver;
+	}
+
+	public WebDriver openCGPSStoreFront(String path) {		
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();		
+		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+		driver.manage().window().maximize();	
+		driver.navigate().to("https://coronationgps.x-shops.com/"+path);	
 		return driver;
 	}
 }

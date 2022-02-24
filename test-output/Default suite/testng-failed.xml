@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.cgpsTests.PAPAgents">
+      <class name="com.cgpsTests.BuyProduct">
         <methods>
-          <include name="loginPAP"/>
-          <include name="verifyPAPAccount"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- com.cgpsTests.PAPAgents -->
+      </class> <!-- com.cgpsTests.BuyProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

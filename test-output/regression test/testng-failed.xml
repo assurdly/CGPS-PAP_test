@@ -3,12 +3,16 @@
 <suite name="Failed suite [regression test]">
   <test thread-count="5" name="create_user_and_create_product(failed)">
     <classes>
-      <class name="com.cgpsTests.PAPAgents">
+      <class name="com.cgpsTests.CreateProduct">
         <methods>
-          <include name="addProductTOCampaign"/>
-          <include name="loginPAP"/>
+          <include name="creatOneProduct"/>
         </methods>
-      </class> <!-- com.cgpsTests.PAPAgents -->
+      </class> <!-- com.cgpsTests.CreateProduct -->
+      <class name="com.cgpsTests.BulkUpload">
+        <methods>
+          <include name="test"/>
+        </methods>
+      </class> <!-- com.cgpsTests.BulkUpload -->
     </classes>
   </test> <!-- create_user_and_create_product(failed) -->
 </suite> <!-- Failed suite [regression test] -->
