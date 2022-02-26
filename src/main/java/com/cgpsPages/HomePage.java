@@ -40,7 +40,7 @@ public class HomePage {
 	}
 
 	// users menu
-	@FindBy(xpath =  "//div[@id='leftMenu']/ul[1]/li[5]/div[1]/span[1]")
+	@FindBy(css =  ".collapsed.icon.menu-item.text-capitalize.users > .line > span[title='Users']  .fa.fa-users")
 	private WebElement usersMenu;	
 	public WebElement getUsersMenu() {
 		return usersMenu;		

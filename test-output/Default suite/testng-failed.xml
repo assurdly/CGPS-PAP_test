@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.cgpsTests.BuyProduct">
+      <class name="com.cgpsTests.BulkUpload">
         <methods>
           <include name="test"/>
         </methods>
-      </class> <!-- com.cgpsTests.BuyProduct -->
+      </class> <!-- com.cgpsTests.BulkUpload -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

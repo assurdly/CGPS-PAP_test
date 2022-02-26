@@ -28,7 +28,7 @@ public class CheckoutPage {
 	}
 
 	//Buy button
-	@FindBy(xpath = "//span[contains(text(),'BUY')]")
+	@FindBy(css = ".regular-main-button")
 	private WebElement buyBtn;	
 	public WebElement buyBtn() {
 		return buyBtn;		

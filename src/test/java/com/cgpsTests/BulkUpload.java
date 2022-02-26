@@ -16,17 +16,18 @@ import com.cgpsPages.HomePage;
 public class BulkUpload {
 	SoftAssert SoftAssert = new SoftAssert();
 	@Test
-	public void test () throws IOException {
+	public void test () throws IOException, InterruptedException {
 		System.out.println("--- sTARTING aGENT bULKuPLOAD tEST");
 		LauchWebApp kApp = new LauchWebApp();
-		WebDriver driver = kApp.openCGPS();
+		WebDriver driver = kApp.openCGPS("");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		Utils fileTsting = new Utils();
 	    fileTsting.write();
 	    
 	    HomePage home = new HomePage(driver);
-		home.getHamburgerIcon().click();
+		//home.getHamburgerIcon().click();
+		Thread.sleep(3000);
 		home.getUsersMenu().click();
 		home.getAgentBulkUpload().click();
 		
@@ -40,6 +41,7 @@ public class BulkUpload {
 	    SoftAssert.assertEquals(actualStatus, expectedStatus);
 	    SoftAssert.assertAll();
 	    System.out.println("bULK uPLOAD cOMPLETED");
+	    
 	   
 	}
 }

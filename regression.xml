@@ -3,8 +3,10 @@
 		preserve-order="true">
 		<classes>
 			<class name="com.cgpsTests.BulkUpload" />
+			<class name="com.cgpsTests.emailNotificationTest" />
 			<class name="com.cgpsTests.CreateProduct" />
 			<class name="com.cgpsTests.PAPAgents" />
+			 
 		</classes>
 	</test>
 </suite>

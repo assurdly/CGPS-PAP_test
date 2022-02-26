@@ -25,7 +25,7 @@ public class CreateProduct {
 		System.out.println("--- sTARTING cREATE nEW aGENT pRODUCT tEST");
 		LauchWebApp kApp = new LauchWebApp();
 		//		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/chromedriver.exe");
-		WebDriver driver = kApp.openCGPS();
+		WebDriver driver = kApp.openCGPS(null);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		HomePage home = new HomePage(driver);

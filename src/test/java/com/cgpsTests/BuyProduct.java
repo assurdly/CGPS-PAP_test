@@ -73,7 +73,7 @@ public class BuyProduct {
 			 if (!driver.getTitle().equalsIgnoreCase("")) {
 				 driver.switchTo().frame("iframe");
 				String modal = driver.findElement(By.cssSelector("subtitle")).getText();
-				System.out.println(modal);
+				System.out.println(modal +"\nPayment successful and test completed");
 			 }
 		 }
 	}
