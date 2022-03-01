@@ -20,6 +20,9 @@ import com.papPages.LoginPage;
 
 public class PAPAgents {
 	WebDriver driver = null;
+	JavascriptExecutor js;
+	
+	
 	
 	@BeforeMethod
 	public void loginPAP() throws InterruptedException {
@@ -32,6 +35,7 @@ public class PAPAgents {
 		login.getUserNameField().sendKeys("technology@coronationgps.com");
 		login.getPasswordField().sendKeys("C0r0n@t!0n");
 		login.getLoginBtn().click();
+		js =  (JavascriptExecutor) driver;
 		
 	}
 
@@ -42,14 +46,26 @@ public class PAPAgents {
 		homePage.getAffMenu().click();
 		homePage.getAffMngrMenu().click();
 		Thread.sleep(3000);
-		for (int i = 1; i < 100; i++) {
-			if (driver.findElement(By.xpath("//tbody/tr["+i+"]/td[4]")).getText().equalsIgnoreCase(Utils.email+"@vomoto.com")) {
-				System.out.println("fOUND cREATED aGENT: "+driver.findElement(By.xpath("//tbody/tr["+i+"]/td[4]")).getText());
-			}
-		}
+//		for (int i = 1; i < 100; i++) {
+//			if (driver.findElement(By.xpath("//tbody/tr["+i+"]/td[4]")).getText().equalsIgnoreCase(Utils.email+"@vomoto.com")) {
+//				System.out.println("fOUND cREATED aGENT: "+driver.findElement(By.xpath("//tbody/tr["+i+"]/td[4]")).getText());
+//			}
+//		}
+		
+		driver.get("https://coronationgps.postaffiliatepro.com/merchants/index.php#Affiliate-Tree");
+		driver.findElement(By.xpath("//div[contains(text(),'Michael Kalu')]")).click();
+		
+		
+		WebElement name = driver.findElement(By.xpath("//div[contains(text(),'michael.kalu@coronationgps.com')]/ancestor::tr/td/img"));	
+		
+		js.executeScript("arguments[0].scrollIntoView(true);",name);
+		name.click();
+		System.out.println(driver.findElement(By.xpath("//div[contains(text(),'ONCFU@vomoto.com')][1]")).getText());
 	}
 	
-	@Test
+
+	
+//	@Test
 	public void addProductTOCampaign() throws InterruptedException {
 		
 		System.out.println("--- sTARTING ADD pRPODUCT tO cAMPAIGN tEST ----");
@@ -59,7 +75,7 @@ public class PAPAgents {
 		
 		CampaignPage campaign = new CampaignPage(driver);
 		campaign.getEditIcon().click();
-		JavascriptExecutor js =  (JavascriptExecutor) driver;
+		
 		js.executeScript("arguments[0].scrollIntoView(true);", campaign.getProductIdTitle());
 		campaign.getProductIdField().click();
 		Actions builderActions = new Actions(driver);

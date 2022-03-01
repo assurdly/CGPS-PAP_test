@@ -26,7 +26,7 @@ public class LauchWebApp {
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		if (instance.equalsIgnoreCase("production")) {
-			driver.navigate().to("https://dev-coronationgps.x-shops.com/admin.php");	
+			driver.navigate().to("https://coronationgps.x-shops.com/admin.php");	
 
 		}else {
 			driver.navigate().to("https://"+USERNAME+":"+PASSWORD+"@dev-coronationgps.x-shops.com/admin.php");	
@@ -35,11 +35,11 @@ public class LauchWebApp {
 		by = By.cssSelector("[name='login']");
 
 
-		driver.findElement(by).sendKeys("wole.onasanya@coronationinsurance.com.ng");
+		driver.findElement(by).sendKeys("admin@example.com");
 
 		// 3. Type 'LGHCzh27DV5F4mD4' in 'password'
 		by = By.cssSelector("[name='password']");
-		driver.findElement(by).sendKeys("LGHCzh27DV5F4mD4");
+		driver.findElement(by).sendKeys("QPjFK2euYaMurzDiM73r8pU35usQQqz7");
 		// 4. Click 'Log in'
 		by = By.xpath("//button[. = '\n  \n    \n    Log in']");
 		driver.findElement(by).click();
