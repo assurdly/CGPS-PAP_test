@@ -15,8 +15,8 @@ public class Utils {
 		//Instantiating the CSVWriter class
 	      CSVWriter writer = new CSVWriter(new FileWriter(System.getProperty("user.dir")+"/src/cgps/output.csv"));
 	      //Writing data to a csv file
-	      String line1[] = {"Firstname","Lastname","Date of Birth","Phone number","Email Address","Street Number","Street Name","City","State","Country","Parent ID"};
-	      String line2[] = {email,"Raw", "10/10/1990","7060591341",email+"@vomoto.com","12345","Bethel","Lagos","Lagos","Nigeria","8009"};
+	      String line1[] = {"Firstname","Lastname","Date of Birth","Phone number","Email Address","Street Number","Street Name","City","State","Country","Parent ID", "Company Name"};
+	      String line2[] = {email,"Raw", "10/10/1990","7060591341",email+"@vomoto.com","12345","Bethel","yaba","Lagos","Nigeria","8009", email+" Raw"};
 	      
 	      //Writing data to the csv file
 	      writer.writeNext(line1);

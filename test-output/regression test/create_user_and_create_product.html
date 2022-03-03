@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>create_user_and_create_product</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>4/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Feb 26 17:35:28 WAT 2022</td>
+<td>Started on:</td><td>Wed Mar 02 08:57:24 WAT 2022</td>
 </tr>
-<tr><td>Total time:</td><td>251 seconds (251833 ms)</td>
+<tr><td>Total time:</td><td>159 seconds (159877 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,14 +76,52 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.cgpsTests.CreateProduct.creatOneProduct()'><b>creatOneProduct</b><br>Test class: com.cgpsTests.CreateProduct</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.cgpsTests.LauchWebApp.openCGPS(LauchWebApp.java:28)
-	at com.cgpsTests.CreateProduct.creatOneProduct(CreateProduct.java:28)
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;admin.php?target=product_questions&quot; class=&quot;link&quot; title=&quot;Catalog&quot;&gt;...&lt;/a&gt; is not clickable at point (66, 136). Other element would receive the click: &lt;div id=&quot;main&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=98.0.4758.102)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;IANKOH-PC&apos;, ip: &apos;172.30.160.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\grey\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50158}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: de286c5c09e021290c2992917d6be83e
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at com.cgpsTests.CreateProduct.creatOneProduct(CreateProduct.java:34)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1540)
-... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace866529530", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace866529530'><pre>java.lang.NullPointerException
-	at com.cgpsTests.LauchWebApp.openCGPS(LauchWebApp.java:28)
-	at com.cgpsTests.CreateProduct.creatOneProduct(CreateProduct.java:28)
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1811880447", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1811880447'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a href=&quot;admin.php?target=product_questions&quot; class=&quot;link&quot; title=&quot;Catalog&quot;&gt;...&lt;/a&gt; is not clickable at point (66, 136). Other element would receive the click: &lt;div id=&quot;main&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=98.0.4758.102)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;IANKOH-PC&apos;, ip: &apos;172.30.160.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 98.0.4758.102, chrome: {chromedriverVersion: 98.0.4758.102 (273bf7ac8c90..., userDataDir: C:\Users\grey\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:50158}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: de286c5c09e021290c2992917d6be83e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy12.click(Unknown Source)
+	at com.cgpsTests.CreateProduct.creatOneProduct(CreateProduct.java:34)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -113,7 +151,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>3</td>
+<td>15</td>
 <td>com.cgpsTests.CreateProduct@483f6d77</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -124,24 +162,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.cgpsTests.emailNotificationTest.addInbox()'><b>addInbox</b><br>Test class: com.cgpsTests.emailNotificationTest</td>
-<td></td>
-<td>66</td>
-<td>com.cgpsTests.emailNotificationTest@5403f35f</td></tr>
-<tr>
 <td title='com.cgpsTests.BulkUpload.test()'><b>test</b><br>Test class: com.cgpsTests.BulkUpload</td>
 <td></td>
-<td>35</td>
+<td>28</td>
 <td>com.cgpsTests.BulkUpload@44821a96</td></tr>
+<tr>
+<td title='com.cgpsTests.emailNotificationTest.addInbox()'><b>addInbox</b><br>Test class: com.cgpsTests.emailNotificationTest</td>
+<td></td>
+<td>53</td>
+<td>com.cgpsTests.emailNotificationTest@5403f35f</td></tr>
 <tr>
 <td title='com.cgpsTests.PAPAgents.verifyPAPAccount()'><b>verifyPAPAccount</b><br>Test class: com.cgpsTests.PAPAgents</td>
 <td></td>
 <td>50</td>
-<td>com.cgpsTests.PAPAgents@7e5afaa6</td></tr>
-<tr>
-<td title='com.cgpsTests.PAPAgents.addProductTOCampaign()'><b>addProductTOCampaign</b><br>Test class: com.cgpsTests.PAPAgents</td>
-<td></td>
-<td>45</td>
 <td>com.cgpsTests.PAPAgents@7e5afaa6</td></tr>
 </table><p>
 </body>

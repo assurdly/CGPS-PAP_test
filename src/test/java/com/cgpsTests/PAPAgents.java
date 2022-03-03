@@ -43,24 +43,26 @@ public class PAPAgents {
 	public void verifyPAPAccount() throws InterruptedException {
 		System.out.println("--- sTARTING vERIFYING nEW aGENT aCCOUNT tEST");
 		HomePage homePage = new HomePage(driver);
+		
+		// checking that the agent is created
 		homePage.getAffMenu().click();
 		homePage.getAffMngrMenu().click();
 		Thread.sleep(3000);
-//		for (int i = 1; i < 100; i++) {
-//			if (driver.findElement(By.xpath("//tbody/tr["+i+"]/td[4]")).getText().equalsIgnoreCase(Utils.email+"@vomoto.com")) {
-//				System.out.println("fOUND cREATED aGENT: "+driver.findElement(By.xpath("//tbody/tr["+i+"]/td[4]")).getText());
-//			}
-//		}
+		for (int i = 1; i < 100; i++) {
+			if (driver.findElement(By.xpath("//tbody/tr["+i+"]/td[4]")).getText().equalsIgnoreCase(Utils.email+"@vomoto.com")) {
+				System.out.println("fOUND cREATED aGENT: "+driver.findElement(By.xpath("//tbody/tr["+i+"]/td[4]")).getText());
+			}
+		}
 		
 		driver.get("https://coronationgps.postaffiliatepro.com/merchants/index.php#Affiliate-Tree");
 		driver.findElement(By.xpath("//div[contains(text(),'Michael Kalu')]")).click();
 		
-		
+		// checking the affiliate tree for the new agent
 		WebElement name = driver.findElement(By.xpath("//div[contains(text(),'michael.kalu@coronationgps.com')]/ancestor::tr/td/img"));	
-		
 		js.executeScript("arguments[0].scrollIntoView(true);",name);
 		name.click();
-		System.out.println(driver.findElement(By.xpath("//div[contains(text(),'ONCFU@vomoto.com')][1]")).getText());
+		System.out.println("fOUND tHE aGENT iN tHE aFFILIATE tREE: "+driver.findElement(By.xpath("//div[contains(text(),'"+Utils.email+"@vomoto.com')][1]")).getText());
+		
 	}
 	
 

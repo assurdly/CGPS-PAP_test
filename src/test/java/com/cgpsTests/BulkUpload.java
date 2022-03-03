@@ -19,7 +19,7 @@ public class BulkUpload {
 	public void test () throws IOException, InterruptedException {
 		System.out.println("--- sTARTING aGENT bULKuPLOAD tEST");
 		LauchWebApp kApp = new LauchWebApp();
-		WebDriver driver = kApp.openCGPS("production");
+		WebDriver driver = kApp.openCGPS("");
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		Utils fileTsting = new Utils();
