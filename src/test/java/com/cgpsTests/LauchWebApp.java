@@ -20,7 +20,7 @@ public class LauchWebApp {
 	//		this.driver = driver;
 	//	}
 	@Test
-	public WebDriver openCGPS(String instance) {		
+	public WebDriver openCGPS(String instance, boolean adminLogin) {		
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();		
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
@@ -31,18 +31,21 @@ public class LauchWebApp {
 		}else {
 			driver.navigate().to("https://"+USERNAME+":"+PASSWORD+"@dev-coronationgps.x-shops.com/admin.php");	
 		}
+		if (adminLogin == true) {
+			by = By.cssSelector("[name='login']");
 
-		by = By.cssSelector("[name='login']");
 
+			driver.findElement(by).sendKeys("admin@example.com");
 
-		driver.findElement(by).sendKeys("admin@example.com");
+			// 3. Type 'LGHCzh27DV5F4mD4' in 'password'
+			by = By.cssSelector("[name='password']");
+			driver.findElement(by).sendKeys("QPjFK2euYaMurzDiM73r8pU35usQQqz7");
+			// 4. Click 'Log in'
+			by = By.xpath("//button[. = '\n  \n    \n    Log in']");
+			driver.findElement(by).click();
+		}
 
-		// 3. Type 'LGHCzh27DV5F4mD4' in 'password'
-		by = By.cssSelector("[name='password']");
-		driver.findElement(by).sendKeys("QPjFK2euYaMurzDiM73r8pU35usQQqz7");
-		// 4. Click 'Log in'
-		by = By.xpath("//button[. = '\n  \n    \n    Log in']");
-		driver.findElement(by).click();
+		
 		return driver;		
 	}
 	public WebDriver openPAP() {		

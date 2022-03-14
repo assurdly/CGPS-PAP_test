@@ -12,14 +12,15 @@ import org.testng.asserts.SoftAssert;
 
 import com.cgpsPages.AddProductPage;
 import com.cgpsPages.HomePage;
+import com.cgpsPages.LoginPage;
 
 public class BulkUpload {
 	SoftAssert SoftAssert = new SoftAssert();
 	@Test
-	public void test () throws IOException, InterruptedException {
+	public void bulkUpload () throws IOException, InterruptedException {
 		System.out.println("--- sTARTING aGENT bULKuPLOAD tEST");
 		LauchWebApp kApp = new LauchWebApp();
-		WebDriver driver = kApp.openCGPS("");
+		WebDriver driver = kApp.openCGPS("", true);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		Utils fileTsting = new Utils();
@@ -41,7 +42,20 @@ public class BulkUpload {
 	    SoftAssert.assertEquals(actualStatus, expectedStatus);
 	    SoftAssert.assertAll();
 	    System.out.println("bULK uPLOAD cOMPLETED");
-	    
-	   
+	}
+	@Test
+	public void newAgentLogin() {
+		System.out.println("--- sTARTING aGENT bULKuPLOAD tEST");
+		LauchWebApp kApp = new LauchWebApp();
+		WebDriver driver = kApp.openCGPS("", false);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		LoginPage loginPage = new LoginPage(driver);
+		loginPage.userNameField().sendKeys(Utils.email+"@vomoto.com");
+		loginPage.pwrdField().sendKeys(Utils.email.toLowerCase());
+		loginPage.loginBtn().click();
+		String changePswrdText = "Admin has requested a change of password for your account. Please change the password before you proceed.";
+		String actualTextString = driver.findElement(By.tagName("p")).getText();
+		SoftAssert.assertEquals(changePswrdText, actualTextString);
+	    SoftAssert.assertAll();		
 	}
 }

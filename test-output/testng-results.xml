@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-03T10:22:08 WAT" name="Default suite" finished-at="2022-03-03T10:23:11 WAT" duration-ms="62396">
+  <suite started-at="2022-03-14T01:26:57 WAT" name="Default suite" finished-at="2022-03-14T01:27:42 WAT" duration-ms="45700">
     <groups>
     </groups>
-    <test started-at="2022-03-03T10:22:08 WAT" name="Default test" finished-at="2022-03-03T10:23:11 WAT" duration-ms="62396">
+    <test started-at="2022-03-14T01:26:57 WAT" name="Default test" finished-at="2022-03-14T01:27:42 WAT" duration-ms="45700">
       <class name="com.cgpsTests.BulkUpload">
-        <test-method signature="test()[pri:0, instance:com.cgpsTests.BulkUpload@1eb5174b]" started-at="2022-03-03T10:22:09 WAT" name="test" finished-at="2022-03-03T10:23:11 WAT" duration-ms="62228" status="PASS">
+        <test-method signature="bulkUpload()[pri:0, instance:com.cgpsTests.BulkUpload@67080771]" started-at="2022-03-14T01:26:57 WAT" name="bulkUpload" finished-at="2022-03-14T01:27:28 WAT" duration-ms="31526" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
+        </test-method> <!-- bulkUpload -->
+        <test-method signature="newAgentLogin()[pri:0, instance:com.cgpsTests.BulkUpload@67080771]" started-at="2022-03-14T01:27:28 WAT" name="newAgentLogin" finished-at="2022-03-14T01:27:42 WAT" duration-ms="14099" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newAgentLogin -->
       </class> <!-- com.cgpsTests.BulkUpload -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
